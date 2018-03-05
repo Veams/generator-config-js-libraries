@@ -6,7 +6,7 @@ const config = require('./config');
 module.exports = class extends Generator {
 	initializing() {
 		this.globalStore = this.options.__store;
-		this.choices = this.options.choices || Object.keys(config).map(item => config[item]);
+		this.choices = this.options.availableChoices || Object.keys(config).map(item => config[item]);
 	}
 
 	prompting() {
